@@ -1,4 +1,12 @@
 window.addEventListener('load', () => {
+    var burger = document.querySelector("#burger");
+    var menu = document.querySelector(".menuHeader");
+    var mainContainer = document.querySelector(".mainContainer");
+    burger.addEventListener("click", function () {
+    menu.classList.toggle('isOpen');
+      
+    })
+
   //get all elements of the page with the class 'text' (returns an HTML collection)
   //get the tectContent of each element and reassign it with it's encrypted equivalent
   function encryptPage() {
@@ -17,6 +25,7 @@ window.addEventListener('load', () => {
     }
     console.log(text);
     console.log('page decrypted');
+    mainContainer.classList.add('isDecrypted');
   }
   //
   // encryption function
@@ -30,6 +39,7 @@ window.addEventListener('load', () => {
         newStr = newStr + b;
     }
     return newStr;
+    mainContainer.classList.remove('isDecrypted');
   }
   //
   // // decryption function

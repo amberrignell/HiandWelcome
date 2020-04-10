@@ -1,1 +1,113 @@
+body,header,footer,html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, li, ul{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+}
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+.navbar {
+  background-color: grey;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  position: sticky;
+}
+
+.navbar #burger {
+  display: none;
+  float: right;
+  padding: 20px;
+}
+
+.navbar #burger span {
+  display: block;
+  height: 3px;
+  width: 30px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  align-items: center;
+  list-style-type: none;
+  width: 90vw;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+}
+
+.mainContainer {
+  width: 100vw;
+  word-wrap: break-word;
+  height:80vh;
+  background-color: black;
+  color: green;
+}
+
+.isDecrypted {
+  background-color: purple;
+  color: black;
+}
+
+
+
+.mainContainer p{
+  width:100vw;
+}
+
+footer {
+  background-color: blue;
+  height: 10vh;
+  width: 100vw;
+  bottom: 0;
+  position: fixed;
+}
+
+body,html{
+  max-width: 100%;
+}
+
+@media(max-width: 767px) {
+  .navbar #burger {
+    display:block;
+  }
+
+  .navbar ul {
+    width: 100vw;
+    overflow: hidden;
+    height: 0px;
+  }
+
+  .navbar ul li {
+    display: block;
+  }
+
+
+  .isOpen {
+    height: 200px;
+    overflow: auto;
+  }
+
+}

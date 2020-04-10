@@ -2,17 +2,35 @@
 <html>
 <head>
 <title> FAC application website </title>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <div class='navbar clearfix'>
+      <a id='burger'>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <ul class="menuHeader">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">A little bit about me</a></li>
+        <li><a href="whycoding.html">Why coding</a></li>
+        <li><a href="whyfac.html">Why FAC</a></li>
+      </ul>
+    </div>
 
-  <h1 class='text'> Home </h1>
-  <p class='text'> My first paragraph.</p>
+  <div class='mainContainer'>
+    <h1 class='text'> Home </h1>
+    <p class='text'> My first paragraph.</p>
 
-  <label for="fname"> Solve this riddle to unlock the content of my website: </br> I can only live were there is light, But I die if the light shines on me. What am I? </label>
-  <input type="text" id="fname" name="fname">
-  <input id='button' type="submit" value="Submit">
-  <input id='iGiveIn' type='submit' value='I Give In'>
+    <label for="fname"> Solve this riddle to unlock the content of my website: </br> I can only live were there is light, But I die if the light shines on me. What am I? </label>
+    <input type="text" id="fname" name="fname">
+    <input id='button' type="submit" value="Submit">
+    <input id='iGiveIn' type='submit' value='I Give In'>
+  </div>
 
+  <footer class='footer'>
+  </footer>
 </body>
 <script type="text/javascript" src='myscripts.js'> </script>
 
