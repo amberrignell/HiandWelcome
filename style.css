@@ -111,14 +111,18 @@ footer {
   }
 
   .navbar ul {
-    width: 100vw;
-    overflow: hidden;
-    height: 0px;
     display: flex;
   }
 
-  .navbar li {
+  .navbar ul li{
     display: block;
+  }
+
+  .navbar .isOpen ul {
+    width: 100vw;
+    overflow: hidden;
+    height: 0px;
+    display: inline-block;
   }
 
   .isOpen {
