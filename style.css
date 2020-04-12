@@ -77,6 +77,7 @@ body,html{
   height:80vh;
   background-color: black;
   color: green;
+  position: fixed;
 }
 
 /* this class is added when the page is decrypted*/
@@ -105,14 +106,18 @@ footer {
   }
 
   a#burger {
-    position:absolute;
-    right: -10px;
+    position:relative;
+    left: 80vw;
   }
 
   .navbar ul {
     width: 100vw;
     overflow: hidden;
     height: 0px;
+    display: flex;
+  }
+
+  .navbar li {
     display: block;
   }
 
