@@ -1,3 +1,4 @@
+/* set default margin padding border and outline of all elements to 0 */
 body,header,footer,html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, li, ul{
     margin:0;
@@ -6,6 +7,7 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
     outline:0;
 }
 
+/* make sure the content doesn't overflow from the it's container - was having issues with text content overflowing to the right of the page*/
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -66,12 +68,11 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   color: green;
 }
 
+/* this class is added when the page is decrypted*/
 .isDecrypted {
   background-color: purple;
   color: black;
 }
-
-
 
 .mainContainer p{
   width:100vw;
@@ -88,6 +89,7 @@ footer {
 body,html{
   max-width: 100%;
 }
+
 
 @media(max-width: 767px) {
   .navbar #burger {
