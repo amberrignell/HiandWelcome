@@ -2,9 +2,10 @@ window.addEventListener('load', () => {
     var burger = document.querySelector("#burger");
     var menu = document.querySelector(".menuHeader");
     var mainContainer = document.querySelector(".mainContainer");
+
+    // When the burger is clicked, add the class 'isOpen' to menuHeader
     burger.addEventListener("click", function () {
     menu.classList.toggle('isOpen');
-      
     })
 
   //get all elements of the page with the class 'text' (returns an HTML collection)

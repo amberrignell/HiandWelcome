@@ -1,4 +1,5 @@
 /* set default margin padding border and outline of all elements to 0 */
+
 body,header,footer,html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, li, ul{
     margin:0;
@@ -7,10 +8,15 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
     outline:0;
 }
 
+body,html{
+  max-width: 100%;
+}
+
 /* make sure the content doesn't overflow from the it's container - was having issues with text content overflowing to the right of the page*/
 *, *:before, *:after {
   box-sizing: border-box;
 }
+
 
 .clearfix:after {
   visibility: hidden;
@@ -24,6 +30,7 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
 
+
 .navbar {
   background-color: grey;
   height: 10vh;
@@ -32,12 +39,15 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   position: sticky;
 }
 
+/* hides the burger if not on phone format*/
 .navbar #burger {
-  display: none;
+  display: block;
   float: right;
   padding: 20px;
+  display: none;
 }
 
+/* uses three spans to create the burger*/
 .navbar #burger span {
   display: block;
   height: 3px;
@@ -56,6 +66,7 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   width: 90vw;
 }
 
+/* remove the underline from anchors (links) in the list */
 .navbar ul li a{
   text-decoration: none;
 }
@@ -86,12 +97,9 @@ footer {
   position: fixed;
 }
 
-body,html{
-  max-width: 100%;
-}
 
 
-@media(max-width: 767px) {
+@media only screen and (max-width:480px) {
   .navbar #burger {
     display:block;
   }
@@ -100,16 +108,14 @@ body,html{
     width: 100vw;
     overflow: hidden;
     height: 0px;
-  }
-
-  .navbar ul li {
     display: block;
-  }
-
+    color: purple; /* to see if media query working*/
 
   .isOpen {
     height: 200px;
     overflow: auto;
   }
+
+
 
 }
