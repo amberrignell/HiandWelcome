@@ -104,18 +104,21 @@ footer {
     display:block;
   }
 
+  a#burger {
+    position:absolute;
+    right: -10px;
+  }
+
   .navbar ul {
     width: 100vw;
     overflow: hidden;
     height: 0px;
     display: block;
-    color: purple; /* to see if media query working*/
+  }
 
   .isOpen {
     height: 200px;
     overflow: auto;
   }
-
-
 
 }
