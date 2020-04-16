@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
     outline:0;
 }
 
-/* make sure the content doesn't overflow from the it's container - was having issues with text content overflowing to the right of the page*/
+/* make sure the content doesn't overflow from the its container - was having issues with text content overflowing to the right of the page*/
 *, *:before, *:after {
   box-sizing: border-box;
 }
