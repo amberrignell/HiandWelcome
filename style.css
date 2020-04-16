@@ -70,30 +70,35 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 .mainContainer {
   width: 100vw;
   word-wrap: break-word;
-  height:240vh;
+  overflow-y: scroll;
+  height:80vh;
   background-color: black;
   color: green;
   position: fixed;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas: "home" "about" "whyCoding" "whyFAC";
 }
 
-.home {
+#home {
+  height:80vh;
   grid-area: home;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "row1" "row2" "row3";
 }
 
-.about {
+#about {
+  height:80vh;
   grid-area: about;
 }
 
-.whyCoding {
+#whyCoding {
+  height:80vh;
   grid-area: whyCoding;
 }
 
-.whyFAC {
+#whyFAC {
+  height:80vh;
   grid-area: whyFAC;
 }
 
@@ -142,23 +147,14 @@ footer {
   width: 100vw;
   bottom: 0;
   position: fixed;
-}
-
-.row {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.column {
-  flex: 33.33%;
-  padding: 5px;
-  height: 10vh;
-}
-
-.column img {
-  height: 7vh;
+footer img{
+  height: 8vh;
   width: auto;
-  display:block;
-  margin:auto;
 }
 
 
