@@ -67,6 +67,7 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 }
 
 .mainContainer {
+  box-sizing: border-box;
   width: 100vw;
   word-wrap: break-word;
   overflow-y: scroll;
@@ -93,6 +94,26 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 #whyCoding {
   height:80vh;
   grid-area: whyCoding;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "point1 point2" "point3 point4";
+}
+
+.point1 {
+  grid-area: point1;
+}
+
+.point2 {
+  grid-area: point2;
+}
+
+.point3 {
+  grid-area: point3;
+}
+
+.point4 {
+  grid-area: point4;
 }
 
 #whyFAC {
