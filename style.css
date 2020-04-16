@@ -36,7 +36,6 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 
 /* hides the burger if not on phone format*/
 .navbar #burger {
-  display: block;
   float: right;
   padding: 20px;
   display: none;
@@ -82,9 +81,8 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 
 #home {
   height:80vh;
+  width: 100vh;
   grid-area: home;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: "row1" "row2" "row3";
 }
 
 #about {
@@ -102,24 +100,6 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   grid-area: whyFAC;
 }
 
-.row1 {
-  grid-area: row1;
-  align-self: center;
-  justify-self: center;
-}
-
-.row2 {
-  grid-area: row2;
-  align-self: center;
-  justify-self: center;
-}
-
-.row3 {
-  grid-area: row3;
-  align-self: center;
-  justify-self: center;
-}
-
 /* this class is added when the page is decrypted*/
 .isDecrypted {
   background-color: #F0EDCE;
@@ -135,6 +115,15 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 #iGiveIn {
   background-color: #2F6685;
   color: #F1D065;
+}
+
+.smiling {
+  display: none;
+  height: 60vh;
+}
+
+.showImage {
+  display: block;
 }
 
 .mainContainer p{

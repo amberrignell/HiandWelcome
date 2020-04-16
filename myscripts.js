@@ -2,6 +2,7 @@ window.addEventListener('load', () => {
     var burger = document.querySelector("#burger");
     var menu = document.querySelector(".menuHeader");
     var mainContainer = document.querySelector(".mainContainer");
+    var smiling = document.querySelector(".smiling");
 
     // When the burger is clicked, add the class 'isOpen' to menuHeader
     burger.addEventListener("click", function () {
@@ -27,6 +28,7 @@ window.addEventListener('load', () => {
     console.log(text);
     console.log('page decrypted');
     mainContainer.classList.add('isDecrypted');
+    smiling.classList.add('showImage');
   }
   //
   // encryption function
