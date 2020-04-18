@@ -35,20 +35,20 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 }
 
 /* hides the burger if not on phone format*/
-.navbar #burger {
+/* .navbar #burger {
   float: right;
   padding: 20px;
   display: none;
-}
+} */
 
 /* uses three spans to create the burger*/
-.navbar #burger span {
+/* .navbar #burger span {
   display: block;
   height: 3px;
   width: 30px;
   background-color: white;
   margin-bottom: 5px;
-}
+} */
 
 .navbar ul {
   display: flex;
@@ -58,6 +58,12 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   align-items: center;
   list-style-type: none;
   width: 90vw;
+}
+
+.riddle {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 /* remove the underline from anchors (links) in the list */
@@ -92,33 +98,24 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 }
 
 #whyCoding {
-  height:80vh;
+  height:auto;
+  width: 100vw;
   grid-area: whyCoding;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "point1 point2" "point3 point4";
+  text-align: center;
 }
 
-.point1 {
-  grid-area: point1;
-}
-
-.point2 {
-  grid-area: point2;
-}
-
-.point3 {
-  grid-area: point3;
-}
-
-.point4 {
-  grid-area: point4;
+.point1, .point2, .point3, .point4 {
+  display: inline-block;
 }
 
 #whyFAC {
-  height:80vh;
+  height:auto;
   grid-area: whyFAC;
+  text-align: center;
+}
+
+.1, .2, .3, .4 {
+  display: inline-block;
 }
 
 /* this class is added when the page is decrypted*/
@@ -128,12 +125,7 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   color: black;
 }
 
-#button {
-  background-color: #2F6685;
-  color: #F1D065;
-}
-
-#iGiveIn {
+#button, #iGiveIn {
   background-color: #2F6685;
   color: #F1D065;
 }
@@ -167,20 +159,29 @@ footer img{
   width: auto;
 }
 
+@@media only screen and (max-width: 620px){
+  .navbar {
+    height: 15vh;
+  }
 
+  .navbar ul {
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  footer.img{
+    height: 5vh;
+  }
+}
 
 @media only screen and (max-width:480px) {
-  .navbar #burger {
+  /* .navbar #burger {
     display:block;
   }
 
   a#burger {
     position:relative;
     left: 80vw;
-  }
-
-  .navbar ul {
-    display: flex;
   }
 
   .navbar ul li{
@@ -197,6 +198,6 @@ footer img{
   .isOpen {
     height: 200px;
     overflow: auto;
-  }
+  } */
 
 }
