@@ -70,6 +70,18 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   display: none;
 }
 
+#riddleAnswer {
+  width: 50%;
+  align-self: center;
+}
+
+#button, #iGiveIn {
+  background-color: #2F6685;
+  color: #F1D065;
+  width: 20%;
+  align-self: center;
+}
+
 /* remove the underline from anchors (links) in the list */
 .navbar ul li a{
   text-decoration: none;
@@ -127,11 +139,6 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   background-color: #F0EDCE;
   opacity: 0.7;
   color: black;
-}
-
-#button, #iGiveIn {
-  background-color: #2F6685;
-  color: #F1D065;
 }
 
 .smiling {
