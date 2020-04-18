@@ -3,6 +3,7 @@ window.addEventListener('load', () => {
     var menu = document.querySelector(".menuHeader");
     var mainContainer = document.querySelector(".mainContainer");
     var smiling = document.querySelector(".smiling");
+    var riddle = document.querySelector(".riddle");
 
     // When the burger is clicked, add the class 'isOpen' to menuHeader
     burger.addEventListener("click", function () {
@@ -29,6 +30,7 @@ window.addEventListener('load', () => {
     console.log('page decrypted');
     mainContainer.classList.add('isDecrypted');
     smiling.classList.add('showImage');
+    riddle.classList.add('hideRiddle');
   }
   //
   // encryption function

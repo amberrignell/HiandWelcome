@@ -66,6 +66,10 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   text-align: center;
 }
 
+.hideRiddle {
+  display: none;
+}
+
 /* remove the underline from anchors (links) in the list */
 .navbar ul li a{
   text-decoration: none;
@@ -87,7 +91,7 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 }
 
 #home {
-  height:80vh;
+  height:auto;
   width: 100vh;
   grid-area: home;
 }
