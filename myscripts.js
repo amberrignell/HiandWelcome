@@ -64,7 +64,7 @@ window.addEventListener('load', () => {
 
 
   encryptPage();
-  document.getElementById("button").addEventListener("click", function () {
+  document.getElementById("submit").addEventListener("click", function () {
     var answer = document.getElementById("fname");
     if (answer.value === 'a shadow') { decryptPage()} else {alert ("Wrong answer - Try again !");};
   })

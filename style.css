@@ -34,6 +34,85 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   position: sticky;
 }
 
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #2F6685;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the 'previous button' to the left */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #2F6685;
+  font-size: 30px;
+  /* padding: 2px 16px;
+  position: absolute;
+  width: 100%;
+  text-align: center; */
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dots {
+  text-align: center;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
 /* hides the burger if not on phone format*/
 /* .navbar #burger {
   float: right;
@@ -58,33 +137,6 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   align-items: center;
   list-style-type: none;
   width: 90vw;
-}
-
-.riddle {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.riddle >* {
-  padding: 1rem;
-  margin: 1rem;
-}
-
-.hideRiddle {
-  display: none;
-}
-
-#riddleAnswer {
-  width: 50%;
-  align-self: center;
-}
-
-#button, #iGiveIn {
-  background-color: #2F6685;
-  color: #F1D065;
-  width: 20%;
-  align-self: center;
 }
 
 /* remove the underline from anchors (links) in the list */
@@ -115,14 +167,61 @@ p {
 #home {
   height:auto;
   grid-area: home;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border: 5px solid green;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "welcome" "riddle";
+}
+
+.welcome {
+  border: 5px solid red;
+  grid-area: welcome;
+}
+
+.riddle {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 5px solid yellow;
+  grid-area: riddle;
+}
+
+.riddle >* {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.hideRiddle {
+  display: none;
+}
+
+#riddleAnswer {
+  width: 50%;
+  align-self: center;
+}
+
+#submit, #iGiveIn {
+  background-color: #2F6685;
+  color: #F1D065;
+  width: 20%;
+  align-self: center;
 }
 
 #about {
   height:80vh;
   grid-area: about;
+  border: 5px solid purple;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 #whyCoding {
+  border: 5px solid blue;
   height:auto;
   grid-area: whyCoding;
   text-align: center;
