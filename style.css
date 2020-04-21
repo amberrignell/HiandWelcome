@@ -64,19 +64,17 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 
 
 #home {
-  height:auto;
+  height:80vh;
   grid-area: home;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  border: 5px solid green;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "welcome" "riddle";
 }
 
 .welcome {
-  border: 5px solid red;
   grid-area: welcome;
 }
 
@@ -84,7 +82,6 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   display: flex;
   flex-direction: column;
   text-align: center;
-  border: 5px solid yellow;
   grid-area: riddle;
 }
 
@@ -125,7 +122,6 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 #about {
   height:80vh;
   grid-area: about;
-  border: 5px solid purple;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -196,7 +192,6 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 
 
 #whyCoding {
-  border: 5px solid blue;
   height:auto;
   grid-area: whyCoding;
   text-align: center;
