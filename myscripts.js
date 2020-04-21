@@ -65,7 +65,8 @@ window.addEventListener('load', () => {
 
   encryptPage();
   document.getElementById("submit").addEventListener("click", function () {
-    var answer = document.getElementById("fname");
+    var answer = document.getElementById("riddleAnswer");
+    console.log(answer);
     if (answer.value === 'a shadow') { decryptPage()} else {alert ("Wrong answer - Try again !");};
   })
   document.getElementById("iGiveIn").addEventListener("click", function() {
