@@ -107,9 +107,13 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   grid-template-areas: "home" "about" "whyCoding" "whyFAC";
 }
 
+p {
+  text-align: justify;
+  margin: 0 10rem;
+}
+
 #home {
   height:auto;
-  width: 100vh;
   grid-area: home;
 }
 
@@ -120,7 +124,6 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 
 #whyCoding {
   height:auto;
-  width: 100vw;
   grid-area: whyCoding;
   text-align: center;
 }
@@ -190,7 +193,7 @@ footer img{
   }
 }
 
-@media only screen and (max-width:480px) {
+/* @media only screen and (max-width:480px) {
   /* .navbar #burger {
     display:block;
   }
