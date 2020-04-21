@@ -109,6 +109,14 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   align-self: center;
 }
 
+#submit:hover {
+  transform: scale(1.1);
+}
+
+#iGiveIn:hover {
+  transform: scale(1.1);
+}
+
 
 
 
@@ -192,6 +200,9 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   height:auto;
   grid-area: whyCoding;
   text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .point1, .point2, .point3, .point4 {
