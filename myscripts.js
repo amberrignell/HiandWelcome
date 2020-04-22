@@ -11,6 +11,24 @@ window.addEventListener('load', () => {
     menu.classList.toggle('isOpen');
     })
 
+
+
+      //Typewriter effect on welcome message
+      var i = 0;
+      var typeWriterMessage = "2048692046414320637265772c2077656c636f6d6520746f206d792077656273697465203a292020";
+      var welcomeMessage = document.querySelector(".welcomeMessage");
+      var speed = 70;
+
+      function typeWriter() {
+        if (i < typeWriterMessage.length) {
+          welcomeMessage.innerHTML += typeWriterMessage.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      typeWriter();
+
+
   //get all elements of the page with the class 'text' (returns an HTML collection)
   //get the tectContent of each element and reassign it with it's encrypted equivalent
   function encryptPage() {
@@ -22,16 +40,19 @@ window.addEventListener('load', () => {
   }
 
   function decryptPage() {
-    console.log('i got here');
     var text = document.getElementsByClassName("text");
     for (let i=0; i<text.length; i++) {
       text[i].textContent = decrypt(text[i].textContent);
     }
-    console.log(text);
-    console.log('page decrypted');
     mainContainer.classList.add('isDecrypted');
     smiling.classList.add('showImage');
-    riddle.classList.add('hideRiddle');
+    riddle.classList.add('hide');
+
+    var welcomeMessage= document.querySelector(".welcomeMessage");
+    welcomeMessage.textContent = "Hi FAC crew, welcome to my website.";
+    console.log("welcome message is");
+    console.log(welcomeMessage.textContent);
+
   }
   //
   // encryption function
@@ -65,22 +86,6 @@ window.addEventListener('load', () => {
 
 
   encryptPage();
-
-  //Typewriter effect on welcome message
-  var i = 0;
-  var typeWriterMessage = "2048692046414320637265772c2077656c636f6d6520746f206d792077656273697465203a292020";
-  var welcomeMessage = document.getElementById("welcomeMessage");
-  var speed = 70;
-
-  function typeWriter() {
-    if (i < typeWriterMessage.length) {
-      welcomeMessage.innerHTML += typeWriterMessage.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-    }
-  }
-  typeWriter();
-
 
   document.getElementById("submit").addEventListener("click", function () {
     var answer = document.getElementById("riddleAnswer");
@@ -125,8 +130,17 @@ function showSlides(n) {
 var playSlides = setInterval(function(){
   plusSlides(1); }, 4000);
 
+
   playPause.addEventListener("click", function () {
-    clearInterval(playSlides);
+    var play = 0;
+    if (play === 0) {
+      clearInterval(playSlides);
+      play = 1;
+    } else if (play ===1){
+      setInterval(function(){
+      plusSlides(1); }, 4000);
+      play = 0;
+    }
   })
 
 window.addEventListener('keydown', keyPressCheck); 
@@ -137,7 +151,6 @@ window.addEventListener('keydown', keyPressCheck); 
   } else if (event.keyCode === 39) {
       plusSlides(1);
   } else if (event.keyCode === 32) {
-      event.preventDefault();
       clearInterval(playSlides);
   }
 }
