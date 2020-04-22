@@ -70,7 +70,7 @@ window.addEventListener('load', () => {
   var i = 0;
   var typeWriterMessage = "2048692046414320637265772c2077656c636f6d6520746f206d792077656273697465203a292020";
   var welcomeMessage = document.getElementById("welcomeMessage");
-  var speed = 90;
+  var speed = 70;
 
   function typeWriter() {
     if (i < typeWriterMessage.length) {
@@ -123,7 +123,7 @@ function showSlides(n) {
 }
 
 var playSlides = setInterval(function(){
-  plusSlides(1); }, 3000);
+  plusSlides(1); }, 4000);
 
   playPause.addEventListener("click", function () {
     clearInterval(playSlides);
