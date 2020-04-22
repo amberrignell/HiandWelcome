@@ -39,11 +39,10 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 
 
 
-
-
 .mainContainer {
-  box-sizing: border-box;
+  padding: 3vh 5vw;
   width: 100vw;
+  box-sizing: border-box;
   word-wrap: break-word;
   overflow-y: scroll;
   height:80vh;
@@ -58,7 +57,6 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 .mainContainer p{
   width:100vw;
   text-align: justify;
-  margin: 0 10rem;
 }
 
 
@@ -114,9 +112,14 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   transform: scale(1.1);
 }
 
+.smiling {
+  display: none;
+  height: 60vh;
+}
 
-
-
+.showImage {
+  display: block;
+}
 
 
 #about {
@@ -194,7 +197,6 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 #whyCoding {
   height:auto;
   grid-area: whyCoding;
-  text-align: center;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
@@ -223,19 +225,6 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
   opacity: 0.7;
   color: black;
 }
-
-.smiling {
-  display: none;
-  height: 60vh;
-}
-
-.showImage {
-  display: block;
-}
-
-
-
-
 
 footer {
   background-color: #2F6685;
@@ -270,4 +259,6 @@ footer img{
   footer.img{
     height: 5vh;
   }
+
+
 }

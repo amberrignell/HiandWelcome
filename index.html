@@ -3,12 +3,17 @@
 <head>
 <title> FAC application website </title>
 <link rel="stylesheet" type="text/css" href="style.css">
-<! –– not sure what the line below does but it's what fixed my mediaqueries which was previously not working. Found it on google whilst trying to debug ––>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <header>
     <nav class='navbar clearfix'>
+      <a id='burger'>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+
       <ul class="menuHeader">
         <li><a class='text' href='#home'>Home</a></li>
         <li><a class='text' href="#about">A little bit about me</a></li>
@@ -92,6 +97,7 @@
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
+
           <br>
 
           <div class='dots'>
@@ -105,6 +111,8 @@
             <span class="dot" onclick="currentSlide(8)"></span>
             <span class="dot" onclick="currentSlide(9)"></span>
           </div>
+
+          <button id="playPause"> Play/Pause </button>
         </div>
     </div>
 

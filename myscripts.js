@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
     var mainContainer = document.querySelector(".mainContainer");
     var smiling = document.querySelector(".smiling");
     var riddle = document.querySelector(".riddle");
+    var playPause = document.querySelector("#playPause");
 
     // When the burger is clicked, add the class 'isOpen' to menuHeader
     burger.addEventListener("click", function () {
@@ -75,6 +76,7 @@ window.addEventListener('load', () => {
 })
 
 
+
 // scripts for the image carousel
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -101,4 +103,24 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+}
+
+var playSlides = setInterval(function(){
+  plusSlides(1); }, 3000);
+
+  playPause.addEventListener("click", function () {
+    clearInterval(playSlides);
+  })
+
+window.addEventListener('keydown', keyPressCheck); 
+  function keyPressCheck(event) {
+    console.log('keys');
+  if (event.keyCode === 37) {
+      plusSlides(-1);
+  } else if (event.keyCode === 39) {
+      plusSlides(1);
+  } else if (event.keyCode === 32) {
+      event.preventDefault();
+      clearInterval(playSlides);
+  }
 }
