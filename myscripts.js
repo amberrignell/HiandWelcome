@@ -65,6 +65,23 @@ window.addEventListener('load', () => {
 
 
   encryptPage();
+
+  //Typewriter effect on welcome message
+  var i = 0;
+  var typeWriterMessage = "2048692046414320637265772c2077656c636f6d6520746f206d792077656273697465203a292020";
+  var welcomeMessage = document.getElementById("welcomeMessage");
+  var speed = 90;
+
+  function typeWriter() {
+    if (i < typeWriterMessage.length) {
+      welcomeMessage.innerHTML += typeWriterMessage.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+  typeWriter();
+
+
   document.getElementById("submit").addEventListener("click", function () {
     var answer = document.getElementById("riddleAnswer");
     console.log(answer);
