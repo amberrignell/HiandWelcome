@@ -14,15 +14,15 @@ window.addEventListener('load', () => {
 
 
       //Typewriter effect on welcome message
-      var i = 0;
+      var typeWriterProgress = 0;
       var typeWriterMessage = "2048692046414320637265772c2077656c636f6d6520746f206d792077656273697465203a292020";
       var welcomeMessage = document.querySelector(".welcomeMessage");
       var speed = 70;
 
       function typeWriter() {
-        if (i < typeWriterMessage.length) {
-          welcomeMessage.innerHTML += typeWriterMessage.charAt(i);
-          i++;
+        if (typeWriterProgress < typeWriterMessage.length) {
+          welcomeMessage.innerHTML += typeWriterMessage.charAt(typeWriterProgress);
+          typeWriterProgress++;
           setTimeout(typeWriter, speed);
         }
       }
@@ -48,6 +48,7 @@ window.addEventListener('load', () => {
     smiling.classList.add('showImage');
     riddle.classList.add('hide');
 
+    typeWriterProgress= typeWriterMessage.length;
     var welcomeMessage= document.querySelector(".welcomeMessage");
     welcomeMessage.textContent = "Hi FAC crew, welcome to my website.";
     console.log("welcome message is");
@@ -127,20 +128,28 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-var playSlides = setInterval(function(){
-  plusSlides(1); }, 4000);
+var playSlides = startSlides();
+var playing = true;
 
+function startSlides() {
+  return setInterval(function(){
+    plusSlides(1); }, 4000);
+}
 
-  playPause.addEventListener("click", function () {
-    var play = 0;
-    if (play === 0) {
-      clearInterval(playSlides);
-      play = 1;
-    } else if (play ===1){
-      setInterval(function(){
-      plusSlides(1); }, 4000);
-      play = 0;
-    }
+function toggleImagePlay(button) {
+  if (playing) {
+    clearInterval(playSlides);
+    button.innerHTML = "play";
+  } else {
+    playSlides = startSlides();
+    button.innerHTML = "pause";
+  }
+  playing = !playing;
+}
+
+  playPause.addEventListener("click", function (event) {
+    var button = event.target;
+    toggleImagePlay(button);
   })
 
 window.addEventListener('keydown', keyPressCheck); 
@@ -151,6 +160,6 @@ window.addEventListener('keydown', keyPressCheck); 
   } else if (event.keyCode === 39) {
       plusSlides(1);
   } else if (event.keyCode === 32) {
-      clearInterval(playSlides);
+      toggleImagePlay(playPause);
   }
 }

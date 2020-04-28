@@ -40,7 +40,6 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 
 
 .mainContainer {
-  padding: 3vh 5vw;
   width: 100vw;
   box-sizing: border-box;
   word-wrap: break-word;
@@ -114,7 +113,9 @@ h1, h2, h3, h4, h5, h6, p, li, ul{
 
 .smiling {
   display: none;
+  object-fit: contain;
   height: 60vh;
+  width: 80vw;
 }
 
 .showImage {
