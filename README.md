@@ -3,6 +3,8 @@
 This website is my application to the Founders and Coders programming bootcamp. I built it using the knowledge I gained from 
 completing the prerequisites on freecodecamp. 
 
+When you first load the page, you'll see the website content is encrypted. You'll have to solve the riddle to decrypt the whole website. If you cannot find the answer, just click the button 'I Give In'. 
+
 One section of the website is missing, but I got caught up with my dissertation and so ran out of time to include it. I'm
 adding it here in the README as a quick fix. It describes my experience with coding so far and what I thought of the
 prerequisites. 
